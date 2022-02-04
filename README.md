@@ -5,14 +5,14 @@ Implementation of the i2c protocol from scratch.
 
 
 # What
-Realization of `i2c` driver for * Master / Slave * communication between` Arduino` and `device i2c`.
+Realization of `i2c` driver for *Master / Slave* communication between` Arduino` and `device i2c`.
 In particular, two versions have been created:
 1. `i2c/basic`: primitive i2c communication standards.
-     To test these drivers, two test main * Master / Slave * were created between two different ATMega
+     To test these drivers, two test main *Master / Slave* were created between two different ATMega
      * (code available in the directory `examples / [master / slave])` *
 
 2. `i2c/interrupt`: driver i2c realized with Interrupt and used in the upper layer `Comunication.h`
-     to allow ** Multi-Slave ** communication
+     to allow **Multi-Slave** communication
 
 Also, the driver for ** LCD devices ** was built using the `comunication.h` layer below.
 The driver allows:
@@ -35,14 +35,14 @@ As an example of how serial communication and the i2c driver work, we have creat
 In the initial phase to fully understand the functioning of the protocol we have created the `Basic` version.
 Subsequently we have created the version with interrupt and with the support of the Multi-slave (therefore with separation of the addresses both at hardware and software level).
 
-Many difficulties * (and not only) * have arisen for the realization of non-standard communication, in particular:
+Many difficulties *(and not only)* have arisen for the realization of non-standard communication, in particular:
 
 -  Arduino: lettura disabilitando interrupt in modalità non bloccante 
 - PC: Opening UART correctly and defining primitives for communication
 - Display: Understanding of low-level screen operation, especially shift
 
 **Note:** The screen is not completely refreshed every time (due to time problems) and an entire shift is made to the display.
-However, the display does not maintain an absolute reference of the columns, but changes them at each shift. * (Ex. Column 3 moves with each shift.) *
+However, the display does not maintain an absolute reference of the columns, but changes them at each shift. *(Ex. Column 3 moves with each shift.)*
 
 
 # How to Run
@@ -70,7 +70,7 @@ Here are the various steps of the game:
 
 1 - At start-up, the PC waits for the Arduino to be ready; once synchronized, `start` will appear on both screens.
 
-2 - The Player's data (* name and desired difficulty *) are entered via the keyboard.
+2 - The Player's data (*name and desired difficulty*) are entered via the keyboard.
 
 3 - Arduino is independent from the pc, so the game continues even if no keys are pressed on the keyboard. At each refresh step it sends a `life or death` message to the PC to communicate the game status.
 

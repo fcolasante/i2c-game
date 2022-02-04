@@ -1,13 +1,13 @@
 # Arduino client
-Bozza per la sincronizzazione fra pc_client e scheda arduino.
+Draft for the synchronization between pc_client and arduino board.
 
 ## utils
-Per debuggare è abilitata la **printf()**, sia per *stdout*, che per *stderr*
+**printf ()** is enabled for debugging, both for *stdout* and *stderr*
 
-## test
-Per testare la sincronizzazione, flashare su arduino il file **arduino_client.c**, tramite il *Makefile* (assicurarsi che la scheda sia letta su `/dev/ttyACM0`):
-```shell
+## Test
+To test the synchronization, flash the `arduino_client.c` file on the arduino, via the `Makefile` (make sure the card is read on `/dev/ttyACM0`):
+```s
 $ make arduino_client.hex
 ```
 
-e lanciare il **main**, in `/test UART/pc_server`.
+Eventyally, launch **main**, from `/test UART/pc_server`.
