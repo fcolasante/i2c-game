@@ -1,7 +1,8 @@
-# interrupt2Catafano
+# I2C Game
 
-Operating Systems Project * A.A. 2018/2019 * by prof. Giorgio Grisetti.
+Operating Systems Project *AY 2018/2019*, at Sapienza, University of Rome,  by prof. Giorgio Grisetti.
 Implementation of the i2c protocol from scratch.
+
 
 # What
 Realization of `i2c` driver for * Master / Slave * communication between` Arduino` and `device i2c`.
@@ -74,6 +75,10 @@ Here are the various steps of the game:
 3 - Arduino is independent from the pc, so the game continues even if no keys are pressed on the keyboard. At each refresh step it sends a `life or death` message to the PC to communicate the game status.
 
 4 - When the player dies the score is printed on both screens and Arduino is waiting for a new game.
+
+
+# Name
+The original game is **Interrupt2Catafano**.
 
 
 # Authors 
